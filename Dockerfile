@@ -11,8 +11,8 @@ ADD ca-cert.pem /etc/ipsec.d/cacerts/
 ADD ca-key.pem /etc/ipsec.d/private/
 
 ADD env_replace.sh /
-#ADD generate_certificate.sh /
-#ADD rules.sh /
+ADD generate_certificate.sh /
+ADD rules.sh /
 
 ADD launcher.sh /
 

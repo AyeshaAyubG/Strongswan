@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER g.baggio@fbk.eu
 
 RUN apt update
-RUN apt-get -y install strongswan strongswan-pki libcharon-extra-plugins
-RUN apt-get -y install nano tcpdump net-tools iputils-ping
+RUN apt-get -y install strongswan strongswan-pki libcharon-extra-plugins libcharon-extauth-plugins libstrongswan-extra-plugins
+RUN apt-get -y install nano tcpdump net-tools iputils-ping libtss2-tcti-tabrmd0 ufw iptables
 
 ADD ipsec.conf /etc/
 ADD ipsec.secrets /etc/
